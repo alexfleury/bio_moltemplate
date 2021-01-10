@@ -1,0 +1,29 @@
+import "src/aspartate.lt"
+import "src/glutamate.lt"
+import "src/lysine.lt"
+import "src/arginine.lt"
+
+import "src/oplsaa.lt"
+
+POLYGLY inherits OPLSAA {
+
+m1 = new ASPARTATE
+m2 = new GLUTAMATE
+m3 = new LYSINE
+m4 = new ARGININE
+
+write("Data Bonds") {
+    # bond-id bond-type
+    $bond:pep1   @bond:003_024   $atom:m1/C   $atom:m2/N
+    $bond:pep2   @bond:003_024   $atom:m2/C  $atom:m3/N
+    $bond:pep3   @bond:003_024   $atom:m3/C  $atom:m4/N
+  }
+}
+
+system = new POLYGLY
+
+write_once("Data Boundary") {
+    0.0 99.9 xlo xhi
+    0.0 99.9 ylo yhi
+    0.0 99.9 zlo zhi
+    }

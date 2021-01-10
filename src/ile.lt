@@ -1,0 +1,47 @@
+import "oplsaa.lt"
+
+ILE inherits OPLSAA {
+
+write('Data Atoms') {
+    $atom:N    $mol @atom:180 0.0 0.0 0.0 0.0
+    $atom:HN   $mol @atom:183 0.0 0.0 0.0 0.0
+    $atom:CA   $mol @atom:166 0.0 0.0 0.0 0.0
+    $atom:HA   $mol @atom:85  0.0 0.0 0.0 0.0
+    $atom:CB   $mol @atom:82  0.0 0.0 0.0 0.0
+    $atom:HB   $mol @atom:85  0.0 0.0 0.0 0.0
+    $atom:CG2  $mol @atom:81  0.0 0.0 0.0 0.0
+    $atom:HG21 $mol @atom:85  0.0 0.0 0.0 0.0
+    $atom:HG22 $mol @atom:85  0.0 0.0 0.0 0.0
+    $atom:HG23 $mol @atom:85  0.0 0.0 0.0 0.0
+    $atom:CG1  $mol @atom:80  0.0 0.0 0.0 0.0
+    $atom:HG11 $mol @atom:85  0.0 0.0 0.0 0.0
+    $atom:HG12 $mol @atom:85  0.0 0.0 0.0 0.0
+    $atom:CD   $mol @atom:80  0.0 0.0 0.0 0.0
+    $atom:HD1  $mol @atom:85  0.0 0.0 0.0 0.0
+    $atom:HD2  $mol @atom:85  0.0 0.0 0.0 0.0
+    $atom:HD3  $mol @atom:85  0.0 0.0 0.0 0.0
+    $atom:C    $mol @atom:177 0.0 0.0 0.0 0.0
+    $atom:O    $mol @atom:178 0.0 0.0 0.0 0.0
+    }
+
+write("Data Bonds") {
+    $bond:N-CA     @bond:013_024  $atom:N    $atom:CA
+    $bond:N-HN     @bond:024_045  $atom:N    $atom:HN
+    $bond:CA-HA    @bond:013_046  $atom:CA   $atom:HA
+    $bond:CA-C     @bond:003_013  $atom:CA   $atom:C
+    $bond:CA-CB    @bond:013_013  $atom:CA   $atom:CB
+    $bond:CB-HB    @bond:013_046  $atom:CB   $atom:HB
+    $bond:CB-CG1   @bond:013_013  $atom:CB   $atom:CG1
+    $bond:CG1-HG11 @bond:013_046  $atom:CG1  $atom:HG11
+    $bond:CG1-HG12 @bond:013_046  $atom:CG1  $atom:HG12
+    $bond:CB-CG2   @bond:013_013  $atom:CB   $atom:CG2
+    $bond:CG2-HG21 @bond:013_046  $atom:CG2  $atom:HG21
+    $bond:CG2-HG22 @bond:013_046  $atom:CG2  $atom:HG22
+    $bond:CG2-HG23 @bond:013_046  $atom:CG2  $atom:HG23
+    $bond:CG1-CD   @bond:013_013  $atom:CG1  $atom:CD
+    $bond:CD-HD1   @bond:013_046  $atom:CD   $atom:HD1
+    $bond:CD-HD2   @bond:013_046  $atom:CD   $atom:HD2
+    $bond:CD-HD3   @bond:013_046  $atom:CD   $atom:HD3
+    $bond:C-O      @bond:003_004  $atom:C    $atom:O
+    }
+}

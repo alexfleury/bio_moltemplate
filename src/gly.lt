@@ -1,0 +1,23 @@
+import "oplsaa.lt"
+
+GLY inherits OPLSAA {
+
+write('Data Atoms') {
+    $atom:N    $mol @atom:180 0.0 0.0 0.0 0.0
+    $atom:HN   $mol @atom:183 0.0 0.0 0.0 0.0
+    $atom:CA   $mol @atom:165 0.0 0.0 0.0 0.0
+    $atom:HA1  $mol @atom:85  0.0 0.0 0.0 0.0
+    $atom:HA2  $mol @atom:85  0.0 0.0 0.0 0.0
+    $atom:C    $mol @atom:177 0.0 0.0 0.0 0.0
+    $atom:O    $mol @atom:178 0.0 0.0 0.0 0.0
+    }
+
+write("Data Bonds") {
+    $bond:N-CA   @bond:013_024   $atom:N   $atom:CA
+    $bond:N-HN   @bond:024_045   $atom:N   $atom:HN
+    $bond:CA-HA1 @bond:013_046   $atom:CA  $atom:HA1
+    $bond:CA-HA2 @bond:013_046   $atom:CA  $atom:HA2
+    $bond:CA-C   @bond:003_013   $atom:CA  $atom:C
+    $bond:C-O    @bond:003_004   $atom:C   $atom:O
+    }
+}

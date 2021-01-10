@@ -1,0 +1,13 @@
+import "oplsaa.lt"
+
+SOD inherits OPLSAA {
+write('Data Atoms') {
+    $atom:Na $mol @atom:880 0.0 0.0 0.0 0.0
+    }
+}
+
+CLA inherits OPLSAA {
+write('Data Atoms') {
+    $atom:Cl $mol @atom:876 0.0 0.0 0.0 0.0
+    }
+}

@@ -1,0 +1,47 @@
+import "oplsaa.lt"
+
+MET_NTERM inherits OPLSAA {
+
+write('Data Atoms') {
+    $atom:N    $mol @atom:230 0.0 0.0 0.0 0.0
+    $atom:HN1  $mol @atom:233 0.0 0.0 0.0 0.0
+    $atom:HN2  $mol @atom:233 0.0 0.0 0.0 0.0
+    $atom:HN3  $mol @atom:233 0.0 0.0 0.0 0.0
+    $atom:CA   $mol @atom:236 0.0 0.0 0.0 0.0
+    $atom:HA   $mol @atom:85  0.0 0.0 0.0 0.0
+    $atom:CB   $mol @atom:81  0.0 0.0 0.0 0.0
+    $atom:HB1  $mol @atom:85  0.0 0.0 0.0 0.0
+    $atom:HB2  $mol @atom:85  0.0 0.0 0.0 0.0
+    $atom:CG   $mol @atom:152 0.0 0.0 0.0 0.0
+    $atom:HG1  $mol @atom:85  0.0 0.0 0.0 0.0
+    $atom:HG2  $mol @atom:85  0.0 0.0 0.0 0.0
+    $atom:SD   $mol @atom:144 0.0 0.0 0.0 0.0
+    $atom:CE   $mol @atom:151 0.0 0.0 0.0 0.0
+    $atom:HE1  $mol @atom:85  0.0 0.0 0.0 0.0
+    $atom:HE2  $mol @atom:85  0.0 0.0 0.0 0.0
+    $atom:HE3  $mol @atom:85  0.0 0.0 0.0 0.0
+    $atom:C    $mol @atom:177 0.0 0.0 0.0 0.0
+    $atom:O    $mol @atom:178 0.0 0.0 0.0 0.0
+    }
+
+write("Data Bonds") {
+    $bond:N-CA   @bond:013_053   $atom:N   $atom:CA
+    $bond:N-HN1  @bond:053_054   $atom:N   $atom:HN1
+    $bond:N-HN2  @bond:053_054   $atom:N   $atom:HN2
+    $bond:N-HN3  @bond:053_054   $atom:N   $atom:HN3
+    $bond:CA-HA  @bond:013_046   $atom:CA  $atom:HA
+    $bond:CA-C   @bond:003_013   $atom:CA  $atom:C
+    $bond:CA-CB  @bond:013_013   $atom:CA  $atom:CB
+    $bond:CB-HB1 @bond:013_046   $atom:CB  $atom:HB1
+    $bond:CB-HB2 @bond:013_046   $atom:CB  $atom:HB2
+    $bond:CB-CG  @bond:013_013   $atom:CB  $atom:CG
+    $bond:CG-HG1 @bond:013_046   $atom:CG  $atom:HG1
+    $bond:CG-HG2 @bond:013_046   $atom:CG  $atom:HG2
+    $bond:CG-SD  @bond:013_016   $atom:CG  $atom:SD
+    $bond:SD-CE  @bond:013_016   $atom:SD  $atom:CE
+    $bond:CE-HE1 @bond:013_046   $atom:CE  $atom:HE1
+    $bond:CE-HE2 @bond:013_046   $atom:CE  $atom:HE2
+    $bond:CE-HE3 @bond:013_046   $atom:CE  $atom:HE3
+    $bond:C-O    @bond:003_004   $atom:C   $atom:O
+    }
+}

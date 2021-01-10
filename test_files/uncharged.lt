@@ -1,0 +1,38 @@
+import "src/serine.lt"
+import "src/threonine.lt"
+import "src/cysteine.lt"
+import "src/tyrosine.lt"
+import "src/asparagine.lt"
+import "src/glutamine.lt"
+import "src/histidine_e.lt"
+
+import "oplsaa.lt"
+
+POLYGLY inherits OPLSAA {
+
+m1 = new SERINE
+m2 = new THREONINE
+m3 = new CYSTEINE
+m4 = new TYROSINE
+m5 = new ASPARAGINE
+m6 = new GLUTAMINE
+m7 = new HISTIDINE_E
+
+write("Data Bonds") {
+    # bond-id bond-type
+    $bond:pep1   @bond:003_024   $atom:m1/C   $atom:m2/N
+    $bond:pep2   @bond:003_024   $atom:m2/C  $atom:m3/N
+    $bond:pep3   @bond:003_024   $atom:m3/C  $atom:m4/N
+    $bond:pep4   @bond:003_024   $atom:m4/C  $atom:m5/N
+    $bond:pep5   @bond:003_024   $atom:m5/C  $atom:m6/N
+    $bond:pep6   @bond:003_024   $atom:m6/C  $atom:m7/N
+  }
+}
+
+system = new POLYGLY
+
+write_once("Data Boundary") {
+    0.0 99.9 xlo xhi
+    0.0 99.9 ylo yhi
+    0.0 99.9 zlo zhi
+    }

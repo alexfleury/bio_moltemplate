@@ -1,0 +1,50 @@
+import "oplsaa.lt"
+
+PHE inherits OPLSAA {
+
+write('Data Atoms') {
+    $atom:N    $mol @atom:180 0.0 0.0 0.0 0.0
+    $atom:HN   $mol @atom:183 0.0 0.0 0.0 0.0
+    $atom:CA   $mol @atom:166 0.0 0.0 0.0 0.0
+    $atom:HA   $mol @atom:85  0.0 0.0 0.0 0.0
+    $atom:CB   $mol @atom:94  0.0 0.0 0.0 0.0
+    $atom:HB1  $mol @atom:85  0.0 0.0 0.0 0.0
+    $atom:HB2  $mol @atom:85  0.0 0.0 0.0 0.0
+    $atom:CG   $mol @atom:90  0.0 0.0 0.0 0.0
+    $atom:CD1  $mol @atom:90  0.0 0.0 0.0 0.0
+    $atom:HD11 $mol @atom:91  0.0 0.0 0.0 0.0
+    $atom:CE1  $mol @atom:90  0.0 0.0 0.0 0.0
+    $atom:HE11 $mol @atom:91  0.0 0.0 0.0 0.0
+    $atom:CZ   $mol @atom:90  0.0 0.0 0.0 0.0
+    $atom:HZ   $mol @atom:91  0.0 0.0 0.0 0.0
+    $atom:CD2  $mol @atom:90  0.0 0.0 0.0 0.0
+    $atom:HD21 $mol @atom:91  0.0 0.0 0.0 0.0
+    $atom:CE2  $mol @atom:90  0.0 0.0 0.0 0.0
+    $atom:HE21 $mol @atom:91  0.0 0.0 0.0 0.0
+    $atom:C    $mol @atom:177 0.0 0.0 0.0 0.0
+    $atom:O    $mol @atom:178 0.0 0.0 0.0 0.0
+    }
+
+write("Data Bonds") {
+    $bond:N-CA     @bond:013_024   $atom:N   $atom:CA
+    $bond:N-HN     @bond:024_045   $atom:N   $atom:HN
+    $bond:CA-HA    @bond:013_046   $atom:CA  $atom:HA
+    $bond:CA-C     @bond:003_013   $atom:CA  $atom:C
+    $bond:CA-CB    @bond:013_013   $atom:CA  $atom:CB
+    $bond:CB-HB1   @bond:013_046   $atom:CB  $atom:HB1
+    $bond:CB-HB2   @bond:013_046   $atom:CB  $atom:HB2
+    $bond:CB-CG    @bond:013_048   $atom:CB  $atom:CG
+    $bond:CG-CD1   @bond:048_048   $atom:CG  $atom:CD1
+    $bond:CD1-HD11 @bond:048_049   $atom:CD1 $atom:HD11
+    $bond:CG-CD2   @bond:048_048   $atom:CG  $atom:CD2
+    $bond:CD2-HD21 @bond:048_049   $atom:CD2 $atom:HD21
+    $bond:CD1-CE1  @bond:048_048   $atom:CD1 $atom:CE1
+    $bond:CE1-HE11 @bond:048_049   $atom:CE1 $atom:HE11
+    $bond:CD2-CE2  @bond:048_048   $atom:CD2 $atom:CE2
+    $bond:CE2-HE21 @bond:048_049   $atom:CE2 $atom:HE21
+    $bond:CE1-CZ   @bond:048_048   $atom:CE1 $atom:CZ
+    $bond:CE2-CZ   @bond:048_048   $atom:CE2 $atom:CZ
+    $bond:CZ-HZ    @bond:048_049   $atom:CZ  $atom:HZ
+    $bond:C-O      @bond:003_004   $atom:C   $atom:O
+    }
+}
